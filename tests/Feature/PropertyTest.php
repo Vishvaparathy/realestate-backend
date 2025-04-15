@@ -5,7 +5,7 @@ namespace Tests\Feature;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 use App\Models\User;
-use App\Models\Property;  // Ensure Property model is imported
+use App\Models\Property;  
 
 class PropertyTest extends TestCase
 {
@@ -60,7 +60,7 @@ class PropertyTest extends TestCase
             'is_agent',
         ]);
 
-        // Optional: Assert the property was saved in the database
+        // Assert the property was saved in the database
         $this->assertDatabaseHas('properties', [
             'title_en' => 'Test Property',
             'location' => 'Colombo',
